@@ -1,7 +1,7 @@
-const GET_USERS_SAGA = 'GET_USERS_SAGA';
-const SET_USERS = 'SET_USERS';
+export const GET_USERS_SAGA = 'GET_USERS_SAGA';
+export const GET_USERS_SAGA_FAILED = 'GET_USERS_SAGA_FAILED';
+export const SET_USERS = 'SET_USERS';
 
-export {  //eslint-disable-line
-  GET_USERS_SAGA,
-  SET_USERS
-};
+export const GET_USERS2_SAGA = 'GET_USERS2_SAGA';
+export const GET_USERS2_SAGA_FAILED = 'GET_USERS2_SAGA_FAILED';
+export const SET_USERS2 = 'SET_USERS2';

@@ -4,6 +4,7 @@
   "private": false,
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "connected-react-router": "^4.5.0",
     "history": "^4.7.2",
     "react": "^16.5.2",
@@ -16,6 +17,7 @@
     "react-scripts": "2.1.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.5",
+    "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0"

@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Table } from 'semantic-ui-react';
 
-import { getUsersSaga } from '../../actions';
+import { getUsers2Saga } from '../../actions';
 
 import styles from './styles';
 
-class Home extends Component {
+class Axios extends Component {
   constructor() {
     super();
     this.handleBtnOnClick = this.handleBtnOnClick.bind(this);
   }
 
   handleBtnOnClick() {
-    this.props.getUsersSaga();
+    this.props.getUsers2Saga();
   }
 
   render() {
@@ -21,8 +21,8 @@ class Home extends Component {
     console.log('Axios render invoked', users.length);
     return (
       <div style={styles.container}>
-        <h3>Home {users.length}</h3>
-        <a href="/axios">Axios</a>
+        <h2>Axios {users.length}</h2>
+        <a href="/">Home</a>
         <br/>
         {errorMsg && <h5 style={styles.errorMsg}>{errorMsg}</h5>}
         {users.length > 0
@@ -75,11 +75,11 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
   users: state.usersReducer.users,
-  errorMsg: state.usersReducer.errorMsg,
+  errorMsg: state.usersReducer.errorMsg
 });
 
 const mapDispatchToProps = dispatch => ({
-  getUsersSaga: () => dispatch(getUsersSaga())
+  getUsers2Saga: () => dispatch(getUsers2Saga())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Axios);

@@ -7,6 +7,8 @@ import { Route } from 'react-router-dom';
 import store, { history } from './store';
 
 import Home from './screens/Home';
+import Axios from './screens/Axios';
+
 
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
@@ -18,6 +20,7 @@ export default class App extends Component {
         <ConnectedRouter history={history}>
           <div>
             <Route exact path="/" component={Home} />
+            <Route exact path="/axios" component={Axios} />
           </div>
         </ConnectedRouter>
       </Provider>
